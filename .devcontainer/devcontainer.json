@@ -1,0 +1,13 @@
+{
+  "name": "devcontainer-${localWorkspaceFolderBasename}",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "devcontainer",
+  "remoteUser": "dev",
+  "workspaceFolder": "/code/${localWorkspaceFolderBasename}",
+  "mounts": [
+    "source=${localEnv:HOME}/.ssh/id_ed25519,target=/home/dev/.ssh/mounted_key,type=bind,consistency=cached,readonly"
+  ],
+  "initializeCommand": "test -f .devcontainer/.env || cp .devcontainer/.env.example .devcontainer/.env",
+  "postCreateCommand": "/usr/local/bin/git-setup.sh",
+  "shutdownAction": "stopCompose"
+}
