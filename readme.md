@@ -1,3 +1,3 @@
 # sei-lah
 
-https://github.com/sei-lah/work/issues/1
+[https://github.com/sei-lah/work/issues/1](objetivo e escopo)
